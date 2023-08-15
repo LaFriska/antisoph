@@ -1,39 +1,36 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, serif;
-    box-sizing: border-box;
+html{
+    background-color: black;
 }
 
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, yellow, lawngreen);
-    padding:10px;
+.content{
+    padding-top: 64px;
+    background: linear-gradient(135deg, #670101, black);
+    padding-bottom: 500px;
 }
 
-.todo{
+.todobox{
     width: 100%;
     max-width: 540px;
-    background: aliceblue;
+    background: #ffd5a0;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    font-family: "Courier New", serif;
 }
 
-.todo h2{
-    color: #07b4b4;
+.todobox h2{
+    color: black;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.todo h2 img{
+.todobox h2 img{
     width: 30px;
     margin-left: 10px;
 }
 
-.row{
+.todo-input-row{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,52 +59,55 @@
     }
 }
 
-ul li{
-    list-style: none;
-    font-size:17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-}
+.todolist{
 
-ul li::before{
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-image: url(../../antisoph/images/unchecked.png);
-    background-size:cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}
+    & li{
+        list-style: none; !important;
+        font-size:17px;
+        padding: 12px 8px 12px 25px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
 
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
-}
+    & li::before{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-image: url(../../antisoph/images/unchecked.png);
+        background-size:cover;
+        background-position: center;
+        top: 12px;
+        left: -20px;
+    }
 
-ul li.checked::before{
-    color: #555;
-    text-decoration: line-through;
-    background-image: url(../../antisoph/images/checked.png);
-}
-ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50px;
-}
+    & li.checked{
+        color: #555;
+        text-decoration: line-through;
+    }
 
-ul li span:hover{
-    background: #dedede;
-    color: red;
+    & li.checked::before{
+        color: #555;
+        text-decoration: line-through;
+        background-image: url(../../antisoph/images/checked.png);
+    }
+    & li span{
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    & li span:hover{
+        background: #ffc989;
+        color: #ff0000;
+    }
 }

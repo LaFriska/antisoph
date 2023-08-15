@@ -42,20 +42,3 @@
         }
     }
 }
-
-.content{
-    color: aliceblue;
-    text-align: center;
-    font-family: "Courier New", serif;
-    padding-top: 64px;
-    line-height: 1.5;
-    background: linear-gradient(135deg, #670101, black);
-    padding-bottom: 500px;
-}
-
-html{
-    background-color: black;
-}
-
-
-
